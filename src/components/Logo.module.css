@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+}
