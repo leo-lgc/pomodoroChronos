@@ -1,28 +1,48 @@
 import './styles/theme.css';
 import './styles/global.css';
-import { Trash } from 'lucide-react';
-import { Heading } from './components/Heading';
+
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
+import { Container } from './components/Container';
+import { CountDown } from './components/CountDown';
+import { DefaultInput } from './components/DefaultInput';
 
 export function App() {
   return (
     <>
-      <Logo />
-      <Menu />
-      <Heading>
-        Olá mundo!
-        <button>
-          <Trash color='green' />
-        </button>
-      </Heading>
+      <Container>
+        <Logo />
+      </Container>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-        aperiam delectus? Maxime earum soluta cupiditate culpa exercitationem
-        deserunt dolor veritatis asperiores repudiandae, corrupti, nesciunt vel
-        iure odio quae dicta nam.
-      </p>
+      <Container>
+        <Menu />
+      </Container>
+
+      <Container>
+        <CountDown />
+      </Container>
+
+      <Container>
+        <form className='form' action=''>
+          <DefaultInput type='text' id='task' labelText='Task:' />
+
+          <DefaultInput id='task' labelText='Lorem ipsum dolor sit amet.' />
+
+          {/* 
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div> */}
+
+          <div className='formRow'>
+            <p>Ciclos:</p>
+            <p>0 0 0 0 0 0</p>
+          </div>
+
+          <div className='formRow'>
+            <button>Enviar</button>
+          </div>
+        </form>
+      </Container>
     </>
   );
 }
